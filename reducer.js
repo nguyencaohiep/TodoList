@@ -24,6 +24,7 @@ const actions = {
     },
     remove({ todos }, index) {
         todos.splice(index,1)
+        storage.set(todos)
     },
     filter(state, value){
         state.filter = value
